@@ -1,6 +1,6 @@
 {
 	"name": "named-sql-tag",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A zero-dependency SQL tagged template with named parameters, composable fragments, IN lists and identifier quoting, for pg ($1) and for better-sqlite3, node:sqlite and mysql2 (?)",
 	"license": "MIT",
 	"author": "Ankur Dubey (https://github.com/RagedPanda)",

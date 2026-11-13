@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-13
+
 ### Changed
 
 - Releases are published through npm trusted publishing (OIDC) instead of an npm token, so there is no long-lived token that could leak and publish a malicious version.
@@ -23,5 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `sql.join(items, separator)`, `sql.empty`, `sql.raw(text)` (marked unsafe) and `isFragment(value)`.
 - ESM and CommonJS builds with TypeScript types, and no runtime dependencies.
 
-[Unreleased]: https://github.com/RagedPanda/named-sql-tag/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/RagedPanda/named-sql-tag/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/RagedPanda/named-sql-tag/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/RagedPanda/named-sql-tag/releases/tag/v0.1.0
