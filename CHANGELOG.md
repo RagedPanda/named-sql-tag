@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-13
+
 ### Added
 
 - The `sql` tagged template: every `${value}` becomes a bound parameter, and nested fragments are composed in and renumbered. Fragments are frozen, so a base query can be shared safely.
@@ -17,4 +19,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `sql.join(items, separator)`, `sql.empty`, `sql.raw(text)` (marked unsafe) and `isFragment(value)`.
 - ESM and CommonJS builds with TypeScript types, and no runtime dependencies.
 
-[Unreleased]: https://github.com/RagedPanda/named-sql-tag/commits/main
+[Unreleased]: https://github.com/RagedPanda/named-sql-tag/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/RagedPanda/named-sql-tag/releases/tag/v0.1.0
