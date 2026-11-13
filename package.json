@@ -1,0 +1,73 @@
+{
+	"name": "named-sql-tag",
+	"version": "0.0.0",
+	"description": "A zero-dependency SQL tagged template with named parameters, composable fragments, IN lists and identifier quoting, for pg ($1) and for better-sqlite3, node:sqlite and mysql2 (?)",
+	"license": "MIT",
+	"author": "Ankur Dubey (https://github.com/RagedPanda)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RagedPanda/named-sql-tag.git"
+	},
+	"type": "module",
+	"main": "./dist/cjs/index.js",
+	"types": "./dist/cjs/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/index.d.ts",
+				"default": "./dist/cjs/index.js"
+			}
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "node -e \"fs.rmSync('dist', {recursive: true, force: true})\" && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node scripts/mark-cjs.ts",
+		"typecheck": "tsc --noEmit",
+		"test": "node --test \"test/**/*.test.ts\"",
+		"coverage": "node --test --experimental-test-coverage --test-coverage-exclude=\"test/**\" --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 \"test/**/*.test.ts\"",
+		"bench": "node bench/index.ts",
+		"prepublishOnly": "npm run typecheck && npm test && npm run build"
+	},
+	"keywords": [
+		"sql",
+		"sql-template-strings",
+		"sql-template-tag",
+		"tagged-template",
+		"template-literal",
+		"named-parameters",
+		"named-params",
+		"query-builder",
+		"prepared-statement",
+		"parameterized-query",
+		"postgres",
+		"pg",
+		"sqlite",
+		"better-sqlite3",
+		"node:sqlite",
+		"mysql",
+		"mysql2",
+		"sql-injection"
+	],
+	"devDependencies": {
+		"@databases/sql": "3.3.0",
+		"@electric-sql/pglite": "0.5.16",
+		"@electric-sql/pglite-socket": "0.2.19",
+		"@types/node": "^26.6.6",
+		"@types/pg": "8.23.1",
+		"pg": "8.23.1",
+		"sql-template-strings": "2.2.2",
+		"sql-template-tag": "5.2.1",
+		"typescript": "^7.0.2"
+	}
+}
